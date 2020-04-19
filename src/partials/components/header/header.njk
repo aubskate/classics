@@ -1,0 +1,27 @@
+{% from "components/logo/logo.njk" import logo as logo %}
+{% from "components/navigation/navigation.njk" import nav as nav %}
+
+{% macro header(image, client, title, nav_home, nav_pages, nav_posts, nav_external, section) %}
+    <header class="aubskate-header">
+        <div class="aubskate-container">
+            <div class="aubskate-header-title-content">
+                {{ logo(
+                    image,
+                    client
+                ) }}
+
+                <h1 class="aubskate-title">
+                    {{ title }}
+                </h1>
+            </div>
+
+            {{ nav(
+                nav_home,
+                nav_pages,
+                nav_posts,
+                nav_external,
+                section
+            ) }}
+        </div>
+    </header>
+{% endmacro %}

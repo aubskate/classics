@@ -1,0 +1,9 @@
+{% macro footer(content) %}
+
+<footer class="aubskate-footer">
+    <div class="aubskate-container">
+        {{ content | markdown | safe }}
+    </div>
+</footer>
+
+{% endmacro %}

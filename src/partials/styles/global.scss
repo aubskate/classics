@@ -1,0 +1,121 @@
+@import 'variables';
+@import 'theme';
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-family: var(--primary-font);
+    font-weight: var(--default-weight);
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font-stack);
+    font-weight: var(--heading-font-weight);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    font-size: var(--h6-font-size);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 80%;
+    margin: 3rem auto 2rem;
+    width: auto;
+}
+
+/* Added this min-height for now so that the footer sits at bottom
+   of screen on Support Page rather than in the middle of the screen.
+   This block of code can probably be removed once Support Page content
+   gets filled out a bit more.
+
+   Header component height + footer component height = 271px. */
+
+.aubskate-main {
+    min-height: calc(100vh - 16.938rem);
+}
+
+.aubskate-container {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    max-width: 48rem;
+    padding: 2rem 2rem 5rem;
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    display: block;
+    margin: 0 0 0.75rem;
+    padding: 0;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+.aubskate-accessible-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+@import '../components/header/header';
+@import '../components/navigation/navigation';
+@import '../components/logo/logo';
+@import '../components/hero/hero';
+@import '../components/related-links/related-links';
+@import '../components/content/content';
+@import '../components/post-list-item/post-list-item';
+@import '../components/alert/alert';
+@import '../components/footer/footer';

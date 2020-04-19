@@ -1,0 +1,23 @@
+---
+renderData:
+  section: "home"
+pagination:
+    data: collections.home
+    alias: home
+    size: 1
+permalink: "/"
+---
+
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+
+    {% if home.data.title -%}
+        <h1 class="aubskate-accessible-text">{{ home.data.title }}</h1>
+    {%- endif %}
+
+    {% if home.data.content -%}
+        {{ home.data.content | markdown | safe }}
+    {%- endif %}
+
+{% endblock %}
