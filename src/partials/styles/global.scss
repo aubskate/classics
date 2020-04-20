@@ -25,6 +25,7 @@ h5,
 h6 {
     font-family: var(--heading-font-stack);
     font-weight: var(--heading-font-weight);
+    letter-spacing: 0.125rem;
 }
 
 h1 {
@@ -58,9 +59,8 @@ p {
 
 img {
     display: block;
-    max-width: 80%;
     margin: 3rem auto 2rem;
-    width: auto;
+    width: 12.5rem;
 }
 
 /* Added this min-height for now so that the footer sits at bottom
