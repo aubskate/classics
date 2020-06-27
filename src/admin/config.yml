@@ -35,15 +35,21 @@ collections:
         widget: "hidden"
         default: "home"
   - name: "video"
-    label: "Videos"
+    label: "Video"
     folder: "src/content/video"
+    create: true
     fields:
-      - name: "name"
+      - name: "title"
         widget: "string"
         required: true
-      - name: "year"
+      - label: "Year"
+        name: "year"
         widget: "string"
         required: false
+      - label: "Video"
+        name: "file"
+        widget: "file"
+        required: true
       - label: "Body"
         name: "content"
         widget: "markdown"
@@ -51,4 +57,4 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "hidden"
-        default: "video"
+        default: "home"
