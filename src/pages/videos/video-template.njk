@@ -1,0 +1,36 @@
+---
+renderData:
+  section: "video"
+  title: "{{ video.data.title }}, {{ video.data.year }}, Aubskate"
+pagination:
+    data: collections.video
+    alias: video
+    size: 1
+permalink: "/videos/{{ video.data.slug }}/"
+---
+
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+
+    {% if video.data.title -%}
+        <h2 class="aubskate-video-title">
+            {{ video.data.title }}
+            {% if video.data.year -%}
+            <span class="aubskate-video-year">{{ video.data.year }}</span>
+            {%- endif %}
+        </h2>
+    {%- endif %}
+
+    {% if video.data.file -%}
+        {% set videoPath = video.data.file %}
+        <video controls class="aubskate-video">
+            <source src="{{ videoPath }}" type="video/mp4" />
+        </video>
+    {%- endif %}
+
+    {% if video.data.content -%}
+        {{ video.data.content | markdown | safe }}
+    {%- endif %}
+
+{% endblock %}
