@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@11ty/eleventy": "0.10.0",
+    "@11ty/eleventy": "0.11.0",
     "clamp-js": "0.7.0",
     "core-js": "3.6.4",
     "css-vars-ponyfill": "2.2.1",
@@ -24,7 +24,7 @@
     "git-rev-sync": "2.0.0",
     "markdown-it": "10.0.0",
     "moment": "2.24.0",
-    "node-sass": "4.13.1",
+    "node-sass": "^4.14.1",
     "nunjucks": "3.2.0",
     "nunjucks-markdown": "2.0.1",
     "onchange": "6.1.0",
