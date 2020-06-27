@@ -1,14 +1,30 @@
 {% extends "layouts/base.njk" %}
+{% from "components/footer/footer.njk" import footer as footer %}
 
 {% block template %}
-    <main class="aubskate-main aubskate-container">
-        <header class="aubskate-header">
-            <img class="aubskate-logo" alt="" src="/assets/images/aubskate-logo.png" />
-            <h1 class="aubskate-title">Aubskate</h1>
-            <p class="aubskate-tagline">Remembering the Classics</p>
-        </header>
+    <header class="aubskate-header">
+        <div class="aubskate-container">
+            <div class="aubskate-header-content">
+                <a href="/" class="aubskate-logo-link">
+                    <img class="aubskate-logo" alt="" src="/assets/images/aubskate-logo.png" />
+                </a>
 
-        {% block content %}
-        {% endblock %}
+                <div class="aubskate-header-text">
+                    <h1 class="aubskate-header-title">Aubskate</h1>
+                    <p class="aubskate-tagline">Remembering the Classics</p>
+                </div>
+            </div>
+
+            <a href="https://www.dropbox.com/sh/6ccgt3km20h1gz8/AAAPgjkA0fJCCFTHgL9nBPFra?dl=0" class="aubskate-download">Download the Videos</a>
+        </div>
+    </header>
+
+    <main class="aubskate-main">
+        <section class="aubskate-container">
+            {% block content %}
+            {% endblock %}
+        </section>
+
+        {{ footer() }}
     </main>
 {% endblock %}

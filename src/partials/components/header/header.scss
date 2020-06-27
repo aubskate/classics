@@ -1,36 +1,80 @@
 .aubskate-header {
     background-color: var(--header-bg-color);
+    color: var(--header-text-color);
 
     .aubskate-container {
-        padding-bottom: 0;
-    }
-
-    .aubskate-header-title-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: $rhythm;
-        margin-bottom: $rhythm * 4;
-    }
-
-    .aubskate-title {
-        margin-top: $rhythm * 3;
-        margin-bottom: 0;
-        color: var(--header-text-color);
-        font-weight: var(--heading-font-weight);
-        font-size: var(--h3-font-size);
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 }
 
-@media #{$medium-bp} {
-    .aubskate-header {
-        .aubskate-header-title-content {
-            flex-direction: row;
-        }
+.aubskate-logo {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
 
-        .aubskate-title {
-            margin-top: 0;
-            margin-left: $rhythm * 4;
-        }
+.aubskate-logo-link {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    width: 5rem;
+}
+
+.aubskate-header-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.aubskate-header-text {
+    display: block;
+    width: 100%;
+}
+
+.aubskate-header-title {
+    margin: 0;
+    font-weight: var(--heading-font-weight);
+    font-size: var(--h3-font-size);
+}
+
+.aubskate-tagline {
+    margin: 0;
+}
+
+.aubskate-download {
+    background: $aubskate-dark;
+    border-radius: 3px;
+    color: var(--header-text-color);
+    display: block;
+    margin: 0 auto;
+    max-width: 22.5rem;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        background: $aubskate-pink;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .aubskate-header .aubskate-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .aubskate-header-content {
+        margin-right: 1rem;
+        width: 100%;
+    }
+
+    .aubskate-download {
+        display: inline-block;
+        max-width: none;
+        width: 22.5rem;
     }
 }

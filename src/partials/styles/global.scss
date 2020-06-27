@@ -14,7 +14,6 @@ body {
     line-height: 1.2;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 h1,
@@ -55,6 +54,16 @@ h6 {
 p {
     font-size: 1.2rem;
     line-height: 1.5;
+}
+
+a {
+    color: var(--body-link);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        color: var(--body-link-hover);
+    }
 }
 
 img {
@@ -146,11 +155,5 @@ input {
 }
 
 @import '../components/header/header';
-@import '../components/navigation/navigation';
-@import '../components/logo/logo';
-@import '../components/hero/hero';
-@import '../components/related-links/related-links';
 @import '../components/content/content';
-@import '../components/post-list-item/post-list-item';
-@import '../components/alert/alert';
 @import '../components/footer/footer';

@@ -6,17 +6,21 @@
     width: 100%;
 
     .aubskate-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
         padding-bottom: 1rem;
         padding-top: 1rem;
+        width: auto;
     }
+}
 
-    a {
-        color: var(--footer-link);
+.aubskate-footer-logo {
+    margin: 0 1.5rem 0 0;
+    width: 10rem;
+}
 
-        &:hover,
-        &focus {
-            color: var(--footer-link-hover);
-            text-decoration: underline;
-        }
-    }
+.aubskate-footer-text {
+    display: block;
+    width: 100%;
 }
