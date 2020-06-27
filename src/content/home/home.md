@@ -1,6 +1,6 @@
 ---
 name: Home
-title: Aubskate
+title: ''
 content: >-
   Yo! It's been a while. This is still a work in progress. I need to dial in the
   streaming or figure out a better hosting solution, but for now, here is a part
