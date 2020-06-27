@@ -39,7 +39,12 @@ collections:
     folder: "src/content/video"
     create: true
     fields:
-      - name: "title"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
         widget: "string"
         required: true
       - label: "Year"
@@ -57,4 +62,4 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "hidden"
-        default: "home"
+        default: "video"
