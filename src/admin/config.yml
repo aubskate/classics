@@ -2,8 +2,9 @@ backend:
   name: github
   branch: develop # Branch where CMS changes will be committed
   repo: aubskate/classics # Path to your GitLab repository
-media_folder: "src/upload" # Media files will be stored in the repo under images/uploads
-public_folder: "/upload"
+  use_large_media_transforms_in_media_library: false
+media_folder: "src/assets/videos" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/videos"
 
 collections:
   - name: "home"
@@ -42,6 +43,36 @@ collections:
             name: "link_content"
             widget: "markdown"
             required: false
+      - label: "Body"
+        name: "content"
+        widget: "markdown"
+        required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: "home"
+
+  - name: "videos"
+    label: "Videos"
+    folder: "src/content/videos"
+    fields:
+      - name: "name"
+        widget: "string"
+        required: true
+      - label: "Featured Image"
+        name: "hero"
+        widget: "image"
+        required: false
+      - label: "Featured Title"
+        name: "title"
+        widget: "string"
+        required: false
+      - label: "Feature Description"
+        name: "markdown"
+        widget: "string"
+        required: false
+      - label: "Video Path"
+        name: "image"
       - label: "Body"
         name: "content"
         widget: "markdown"
