@@ -63,6 +63,13 @@ img {
     width: 12.5rem;
 }
 
+.aubskate-video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+
 /* Added this min-height for now so that the footer sits at bottom
    of screen on Support Page rather than in the middle of the screen.
    This block of code can probably be removed once Support Page content
@@ -78,9 +85,37 @@ img {
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
-    max-width: 48rem;
-    padding: 2rem 2rem 5rem;
+    max-width: 90rem;
+    padding: 2rem 1.5rem 5rem;
     width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+    .aubskate-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .aubskate-container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .aubskate-container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .aubskate-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 fieldset {
