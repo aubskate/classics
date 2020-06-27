@@ -10,6 +10,7 @@ permalink: "/"
 ---
 
 {% extends "layouts/main.njk" %}
+{% set videos = collections.video %}
 
 {% block content %}
 
@@ -20,5 +21,18 @@ permalink: "/"
     {% if home.data.content -%}
         {{ home.data.content | markdown | safe }}
     {%- endif %}
+
+    <ul class="aubskate-video-list">
+        {% for video in videos -%}
+        <li class="aubskate-video">
+            <a href="/{{ video.data.slug }}/" class="aubskate-video-link">
+                {{ video.data.title }}
+                {% if video.data.year -%}
+                    <span class="aubskate-video-meta">{{ video.data.year}}</span>
+                {%- endif %}
+            </a>
+        </li>
+        {%- endfor %}
+    </ul>
 
 {% endblock %}
