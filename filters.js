@@ -73,11 +73,11 @@ const sliceData = (data, count) => data.slice(0, count);
 const sortByDate = (data) => data.sort((item1, item2) => {
     const returnSecond = -1;
 
-    if (item1.released > item2.released) {
+    if (item1.data.released > item2.data.released) {
         return 1;
     }
 
-    if (item1.released < item2.released) {
+    if (item1.data.released < item2.data.released) {
         return returnSecond;
     }
 
