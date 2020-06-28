@@ -19,7 +19,7 @@ permalink: "/"
     {%- endif %}
 
     {% set videos = collections.video %}
-    {% set sortedVideos = videos | sortByDate %}
+    {% set sortedVideos = videos | sortByDate(videos) %}
     <h2 id="videos">Videos</h2>
     <ul class="aubskate-video-list">
         {% for video in sortedVideos -%}
