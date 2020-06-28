@@ -1,9 +1,12 @@
-.aubskate-content {
-    display: flex;
+.aubskate-video-list {
+    margin: 0 0 2rem;
+    padding: 0;
+}
 
-    &.aubskate-has-sidebar {
-        flex-direction: column;
-    }
+.aubskate-video-list-item {
+    display: block;
+    margin: 0 0 1rem;
+    padding: 0;
 }
 
 .aubskate-markdown {
@@ -87,20 +90,5 @@
 
     i {
         font-style: italic;
-    }
-}
-
-@media #{$large-bp} {
-    .aubskate-content.aubskate-has-sidebar {
-        justify-content: space-between;
-        flex-direction: row;
-
-        .aubskate-article {
-            width: 56.25%;
-        }
-
-        .aubskate-sidebar {
-            width: 31.25%;
-        }
     }
 }

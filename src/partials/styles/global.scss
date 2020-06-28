@@ -14,7 +14,6 @@ body {
     line-height: 1.2;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 h1,
@@ -57,10 +56,34 @@ p {
     line-height: 1.5;
 }
 
+a {
+    color: var(--body-link);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        color: var(--body-link-hover);
+    }
+}
+
 img {
     display: block;
     margin: 3rem auto 2rem;
     width: 12.5rem;
+}
+
+.aubskate-video-container {
+    display: block;
+    margin: 2rem 0;
+    max-width: 48rem;
+    width: 100%;
+}
+
+.aubskate-video {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 /* Added this min-height for now so that the footer sits at bottom
@@ -78,9 +101,37 @@ img {
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
-    max-width: 48rem;
-    padding: 2rem 2rem 5rem;
+    max-width: 90rem;
+    padding: 2rem 1.5rem 5rem;
     width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+    .aubskate-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .aubskate-container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .aubskate-container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .aubskate-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 fieldset {
@@ -111,11 +162,5 @@ input {
 }
 
 @import '../components/header/header';
-@import '../components/navigation/navigation';
-@import '../components/logo/logo';
-@import '../components/hero/hero';
-@import '../components/related-links/related-links';
 @import '../components/content/content';
-@import '../components/post-list-item/post-list-item';
-@import '../components/alert/alert';
 @import '../components/footer/footer';

@@ -1,8 +1,16 @@
 {% extends "layouts/base.njk" %}
+{% from "components/header/header.njk" import header as header %}
+{% from "components/footer/footer.njk" import footer as footer %}
 
 {% block template %}
-    <main class="aubskate-main aubskate-container">
-        {% block content %}
-        {% endblock %}
+    <main class="aubskate-main">
+        {{ header() }}
+
+        <section class="aubskate-container">
+            {% block content %}
+            {% endblock %}
+        </section>
+
+        {{ footer() }}
     </main>
 {% endblock %}
