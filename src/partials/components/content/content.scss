@@ -4,9 +4,59 @@
 }
 
 .aubskate-video-list-item {
+    border: 2px solid $aubskate-dark;
     display: block;
     margin: 0 0 1rem;
     padding: 0;
+}
+
+@media screen and (min-width: 33rem) {
+    .aubskate-video-list-item {
+        display: inline-block;
+        margin-left: 2%;
+        vertical-align: top;
+        width: 48%;
+
+        &:nth-child(2n+1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .aubskate-video-list-item {
+        display: inline-block;
+        margin-left: 2%;
+        width: 31%;
+
+        &:nth-child(2n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(3n+1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .aubskate-video-list-item {
+        display: inline-block;
+        margin-left: 2%;
+        width: 23.5%;
+
+        &:nth-child(2n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(3n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(4n+1) {
+            margin-left: 0;
+        }
+    }
 }
 
 .aubskate-markdown {
