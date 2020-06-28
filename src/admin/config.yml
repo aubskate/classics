@@ -62,7 +62,16 @@ collections:
       - label: "Video"
         name: "file"
         widget: "file"
-        required: true
+        required: false
+      - label: "External Streaming URL"
+        name: "streaming"
+        widget: "string"
+        required: false
+      - label: "Use External"
+        name: "external"
+        widget: "boolean"
+        default: true
+        required: false
       - label: "Image"
         name: "poster"
         widget: "image"

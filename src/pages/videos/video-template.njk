@@ -14,13 +14,21 @@ permalink: "/{{ video.data.slug }}/"
 {% block content %}
     <a class="aubskate-back-link" href="/#videos">Back to video list</a>
 
-    {% if video.data.file -%}
+    {% set localUrl = video.data.file %}
+    {% set externalUrl = video.data.streaming %}
+    {% if video.data.external %}
+        {% set videoUrl = externalUrl %}
+    {% else %}
+    {% set videoUrl = localUrl %}
+    {% endif %}
+
+    {% if videoUrl -%}
         <div class="aubskate-video-container">
             <video
                 controls
                 class="aubskate-video"
                 poster="{{ video.data.poster }}"
-                src="{{ video.data.file }}"
+                src="{{ videoUrl }}"
                 type="video/mp4">
             </video>
         </div>
