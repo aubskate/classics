@@ -12,25 +12,48 @@ permalink: "/{{ video.data.slug }}/"
 {% extends "layouts/main.njk" %}
 
 {% block content %}
-
-    {% if video.data.title -%}
-        <h2 class="aubskate-video-title">
-            {{ video.data.title }}
-            {% if video.data.year -%}
-            <span class="aubskate-video-year">{{ video.data.year }}</span>
-            {%- endif %}
-        </h2>
-    {%- endif %}
+    <a class="aubskate-back-link" href="/#videos">Back to video list</a>
 
     {% if video.data.file -%}
-        {% set videoPath = video.data.file %}
-        <video controls class="aubskate-video">
-            <source src="{{ videoPath }}" type="video/mp4" />
-        </video>
+        <div class="aubskate-video-container">
+            <video
+                controls
+                class="aubskate-video"
+                poster="{{ video.data.poster }}"
+                src="{{ video.data.file }}"
+                type="video/mp4">
+            </video>
+        </div>
+    {%- endif %}
+
+    {% if video.data.title -%}
+        <div class="aubskate-header-container">
+            <div class="aubskate-header-content aubskate-video-header">
+                <div class="aubskate-header-text">
+                    <h2 class="aubskate-video-title">
+                        {{ video.data.title }}
+                    </h2>
+                    <p class="aubskate-video-meta">
+                        {% if video.data.year -%}
+                        <span>{{ video.data.year }}</span>
+                        {%- endif %}
+                        {% if video.data.production -%}
+                        <span>{{ video.data.production }}</span>
+                        {%- endif %}
+                    </p>
+                </div>
+            </div>
+
+            {% if video.data.download -%}
+                <a href="{{ video.data.download }}" class="aubskate-download aubskate-video-download">Download</a>
+            {%- endif %}
+        </div>
     {%- endif %}
 
     {% if video.data.content -%}
-        {{ video.data.content | markdown | safe }}
+        <div class="aubskate-markdown">
+            {{ video.data.content | markdown | safe }}
+        </div>
     {%- endif %}
 
 {% endblock %}

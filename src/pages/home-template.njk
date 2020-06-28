@@ -1,7 +1,7 @@
 ---
 renderData:
   section: "home"
-  title: "home.data.title"
+  title: "Aubskate, Remembering the Classics"
 pagination:
     data: collections.home
     alias: home
@@ -10,21 +10,21 @@ permalink: "/"
 ---
 
 {% extends "layouts/main.njk" %}
-{% set videos = collections.video %}
 
 {% block content %}
-
-    {% if home.data.title -%}
-        <h1 class="aubskate-accessible-text">{{ home.data.title }}</h1>
-    {%- endif %}
-
     {% if home.data.content -%}
-        {{ home.data.content | markdown | safe }}
+        <div class="aubskate-markdown">
+            {{ home.data.content | markdown | safe }}
+        </div>
     {%- endif %}
 
+    {% set videos = collections.video %}
+    <h2 id="videos">Videos</h2>
     <ul class="aubskate-video-list">
         {% for video in videos -%}
-        <li class="aubskate-video">
+        <li class="aubskate-video-list-item">
+            <img src="{{ video.data.poster }}" alt="{{ video.data.title }} Title Screen" class="aubskate-video-image" />
+
             <a href="/{{ video.data.slug }}/" class="aubskate-video-link">
                 {{ video.data.title }}
                 {% if video.data.year -%}
@@ -34,5 +34,4 @@ permalink: "/"
         </li>
         {%- endfor %}
     </ul>
-
 {% endblock %}
