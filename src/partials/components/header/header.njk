@@ -1,27 +1,20 @@
-{% from "components/logo/logo.njk" import logo as logo %}
-{% from "components/navigation/navigation.njk" import nav as nav %}
+{% macro header() %}
 
-{% macro header(image, client, title, nav_home, nav_pages, nav_posts, nav_external, section) %}
-    <header class="aubskate-header">
-        <div class="aubskate-container">
-            <div class="aubskate-header-title-content">
-                {{ logo(
-                    image,
-                    client
-                ) }}
+<header class="aubskate-header">
+    <div class="aubskate-container aubskate-header-container">
+        <div class="aubskate-header-content">
+            <a href="/" class="aubskate-logo-link">
+                <img class="aubskate-logo" alt="" src="/assets/images/aubskate-logo.png" />
+            </a>
 
-                <h1 class="aubskate-title">
-                    {{ title }}
-                </h1>
+            <div class="aubskate-header-text">
+                <h1 class="aubskate-header-title">Aubskate</h1>
+                <p class="aubskate-tagline">Remembering the Classics</p>
             </div>
-
-            {{ nav(
-                nav_home,
-                nav_pages,
-                nav_posts,
-                nav_external,
-                section
-            ) }}
         </div>
-    </header>
+
+        <a href="https://www.dropbox.com/sh/6ccgt3km20h1gz8/AAAPgjkA0fJCCFTHgL9nBPFra?dl=0" class="aubskate-download">Download the Videos</a>
+    </div>
+</header>
+
 {% endmacro %}

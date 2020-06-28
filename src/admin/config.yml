@@ -39,16 +39,37 @@ collections:
     folder: "src/content/video"
     create: true
     fields:
-      - name: "title"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
         widget: "string"
         required: true
       - label: "Year"
         name: "year"
         widget: "string"
-        required: false
+        required: true
+      - label: "Released"
+        name: "released"
+        widget: "date"
+        required: true
+      - label: "Produced By"
+        name: "production"
+        widget: "string"
+        required: true
       - label: "Video"
         name: "file"
         widget: "file"
+        required: true
+      - label: "Image"
+        name: "poster"
+        widget: "image"
+        required: true
+      - label: "Download Link"
+        name: "download"
+        widget: "string"
         required: true
       - label: "Body"
         name: "content"
@@ -57,4 +78,4 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "hidden"
-        default: "home"
+        default: "video"
