@@ -7,6 +7,84 @@
     display: block;
     margin: 0 0 1rem;
     padding: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.aubskate-video-image {
+    margin: 0;
+    z-index: 1;
+}
+
+.aubskate-video-link {
+    display: block;
+    z-index: 5;
+
+    &:after {
+        border: 2px solid $aubskate-dark;
+        border-radius: 4px;
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &:hover:after,
+    &:focus:after {
+        border-color: $aubskate-teal;
+    }
+}
+
+@media screen and (min-width: 33rem) {
+    .aubskate-video-list-item {
+        display: inline-block;
+        margin-left: 2%;
+        vertical-align: top;
+        width: 48%;
+
+        &:nth-child(2n+1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .aubskate-video-list-item {
+        display: inline-block;
+        margin-left: 2%;
+        width: 31%;
+
+        &:nth-child(2n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(3n+1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .aubskate-video-list-item {
+        display: inline-block;
+        margin-left: 2%;
+        width: 23.5%;
+
+        &:nth-child(2n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(3n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(4n+1) {
+            margin-left: 0;
+        }
+    }
 }
 
 .aubskate-markdown {

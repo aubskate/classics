@@ -19,17 +19,15 @@ permalink: "/"
     {%- endif %}
 
     {% set videos = collections.video %}
+    {% set sortedVideos = videos | sortByDate(videos) %}
     <h2 id="videos">Videos</h2>
     <ul class="aubskate-video-list">
-        {% for video in videos -%}
+        {% for video in sortedVideos -%}
         <li class="aubskate-video-list-item">
             <img src="{{ video.data.poster }}" alt="{{ video.data.title }} Title Screen" class="aubskate-video-image" />
 
-            <a href="/{{ video.data.slug }}/" class="aubskate-video-link">
-                {{ video.data.title }}
-                {% if video.data.year -%}
-                    <span class="aubskate-video-meta">{{ video.data.year}}</span>
-                {%- endif %}
+            <a href="/{{ video.data.slug }}/" class="aubskate-video-link" title="{{ video.data.title }}">
+                <span class="aubskate-accessible-text">{{ video.data.title }}</span>
             </a>
         </li>
         {%- endfor %}

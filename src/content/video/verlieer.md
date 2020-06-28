@@ -1,8 +1,12 @@
 ---
 title: Verlieer
-slug: 'verlieer'
+slug: verlieer
 year: '2004'
-production: 'Taio Productions'
+released: 2004-03-11T05:00:00.000Z
+production: Taio Productions
 file: /assets/videos/Verlieer.mp4
+poster: /assets/videos/Verlieer.png
+download: 'https://www.dropbox.com/s/58ddv6alk6qdir9/Verlieer%20%282004%29.mp4?dl=0'
 tags: video
 ---
+

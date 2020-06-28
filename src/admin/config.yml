@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: develop # Branch where CMS changes will be committed
+  branch: staging # Branch where CMS changes will be committed
   repo: aubskate/classics # Path to your GitLab repository
   use_large_media_transforms_in_media_library: false
 media_folder: "src/assets/videos" # Media files will be stored in the repo under images/uploads
