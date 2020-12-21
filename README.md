@@ -29,11 +29,6 @@ This project uses the `npm` package manager.
   ```  
 4. Navigate your browser to `http://localhost:3110`.
 
-## Website Structure
-Please reference this guide to gain insight on the inner workings of the project, file structure and methodology.
-
-### Branching Strategy
-
 ### Basic Structure
 ```
 src/
