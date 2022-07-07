@@ -23,7 +23,7 @@
     "fs-extra": "9.0.0",
     "git-rev-sync": "2.0.0",
     "markdown-it": "10.0.0",
-    "moment": "2.24.0",
+    "moment": "2.29.4",
     "node-sass": "^4.14.1",
     "nunjucks": "3.2.0",
     "nunjucks-markdown": "2.0.1",
