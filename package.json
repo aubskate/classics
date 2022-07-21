@@ -36,7 +36,7 @@
     "rollup-plugin-terser": "5.2.0",
     "rollup-plugin-uglify": "6.0.4",
     "stylelint": "13.0.0",
-    "terser": "4.6.6"
+    "terser": "4.8.1"
   },
   "scripts": {
     "build": "npm run clean && npm run build:eleventy && npm run build:sass && npm run build:rollup && rimraf dist/content",
